@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @ToString
@@ -18,9 +18,5 @@ public class UserDataContract implements Serializable{
     @ApiModelProperty(required = true)
     private String name;
 
-    private List<String> devices;
-
-    private HomeDataContract home;
-
-    private WorkDataContract work;
+    private Set<String> devices;
 }

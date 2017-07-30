@@ -4,10 +4,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Builder
@@ -20,9 +21,9 @@ public class User implements Serializable {
 
     private String name;
 
-    private List<String> devices;
+    private Set<String> devices;
 
-    private Home home;
+    @Version
+    private int version;
 
-    private Work work;
 }

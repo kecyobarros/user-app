@@ -1,9 +1,8 @@
-package br.com.kecyo.userapp.config.migration;
+package br.com.kecyo.userapp.utils;
 
+import br.com.kecyo.userapp.config.migration.MigrationMongoDB;
 import br.com.kecyo.userapp.entities.User;
 import com.google.common.collect.Sets;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.net.URISyntaxException;
@@ -12,11 +11,9 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Slf4j
-@Service
 public class ExtractorCSV {
 
-    private static Function<String, User> mapToItem = (line) -> {
+    private Function<String, User> mapToItem = (line) -> {
         final String[] p = line.split(";");
         return User.builder()
                 .id(p[0])
@@ -25,8 +22,7 @@ public class ExtractorCSV {
                 .build();
     };
 
-    public static Map<String, Optional<User>> execute() throws URISyntaxException, IOException {
-        log.info("Extractor CSV");
+    public Map<String, Optional<User>> execute() throws URISyntaxException, IOException {
 
         Map<String, Optional<User>> collect;
 

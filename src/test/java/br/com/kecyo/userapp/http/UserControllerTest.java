@@ -2,8 +2,8 @@ package br.com.kecyo.userapp.http;
 
 import br.com.kecyo.userapp.http.data.UserDataContract;
 import br.com.kecyo.userapp.usescases.exception.UserNotFoundException;
-import br.com.kecyo.userapp.util.ObjectMapperConfig;
-import br.com.kecyo.userapp.util.WebMvcTestBase;
+import br.com.kecyo.userapp.utils.ObjectMapperConfig;
+import br.com.kecyo.userapp.utils.WebMvcTestBase;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Files;
 import org.junit.Test;

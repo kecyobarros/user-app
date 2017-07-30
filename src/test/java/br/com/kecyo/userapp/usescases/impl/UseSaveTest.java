@@ -4,7 +4,7 @@ import br.com.kecyo.userapp.entities.User;
 import br.com.kecyo.userapp.gateways.UserGateway;
 import br.com.kecyo.userapp.http.converter.UserConverter;
 import br.com.kecyo.userapp.http.data.UserDataContract;
-import br.com.kecyo.userapp.util.ObjectMapperConfig;
+import br.com.kecyo.userapp.utils.ObjectMapperConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Files;
 import org.junit.Before;
@@ -18,7 +18,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 
-import static br.com.kecyo.userapp.util.asserts.AssertUser.assertUser;
+import static br.com.kecyo.userapp.utils.asserts.AssertUser.assertUser;
 import static org.mockito.Mockito.verify;
 
 public class UseSaveTest {

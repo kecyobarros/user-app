@@ -1,4 +1,4 @@
-package br.com.kecyo.userapp.util;
+package br.com.kecyo.userapp.utils;
 
 import br.com.kecyo.userapp.http.UserController;
 import br.com.kecyo.userapp.usescases.impl.UserSave;

@@ -2,14 +2,14 @@ package br.com.kecyo.userapp.http.converter;
 
 import br.com.kecyo.userapp.entities.User;
 import br.com.kecyo.userapp.http.data.UserDataContract;
-import br.com.kecyo.userapp.util.ObjectMapperConfig;
+import br.com.kecyo.userapp.utils.ObjectMapperConfig;
 import com.google.common.collect.Sets;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Set;
 
-import static br.com.kecyo.userapp.util.asserts.AssertUserDataContract.assertUserDataContract;
+import static br.com.kecyo.userapp.utils.asserts.AssertUserDataContract.assertUserDataContract;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 

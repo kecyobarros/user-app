@@ -1,4 +1,4 @@
-package br.com.kecyo.userapp.util.asserts;
+package br.com.kecyo.userapp.utils.asserts;
 
 import br.com.kecyo.userapp.http.data.UserDataContract;
 

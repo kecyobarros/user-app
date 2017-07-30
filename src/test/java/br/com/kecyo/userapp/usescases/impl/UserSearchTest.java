@@ -5,7 +5,7 @@ import br.com.kecyo.userapp.gateways.UserGateway;
 import br.com.kecyo.userapp.http.converter.UserDataContractConverter;
 import br.com.kecyo.userapp.http.data.UserDataContract;
 import br.com.kecyo.userapp.usescases.exception.UserNotFoundException;
-import br.com.kecyo.userapp.util.ObjectMapperConfig;
+import br.com.kecyo.userapp.utils.ObjectMapperConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Files;
 import org.junit.Before;
@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
 import java.util.Collections;
 import java.util.Optional;
 
-import static br.com.kecyo.userapp.util.asserts.AssertUserDataContract.assertUserDataContract;
+import static br.com.kecyo.userapp.utils.asserts.AssertUserDataContract.assertUserDataContract;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;

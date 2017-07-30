@@ -24,8 +24,4 @@ public class MigrationMongoDB {
             .map(Optional::get)
             .forEach(db::insert);
     }
-
-
-
-
 }

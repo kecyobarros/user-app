@@ -1,0 +1,32 @@
+server:
+  port: ${port:8080}
+  context-path: /user
+
+spring:
+  profiles:
+    active: dev
+  data:
+    mongodb:
+      database: userCollection
+      host: localhost
+      port: 27017
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+      READ_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+      WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_PROPERTIES: true
+    parser:
+      ALLOW_COMMENTS: true
+
+management:
+  security:
+    enabled: false
+
+endpoints:
+  shutdown:
+    enabled: false

@@ -5,9 +5,10 @@ import br.com.kecyo.userapp.gateway.UserGateway;
 import br.com.kecyo.userapp.gateway.repository.mongo.UserRespository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -18,9 +19,9 @@ public class UserGatewayImpl implements UserGateway{
     private final UserRespository repository;
 
     @Override
-    public List<User> findAll() {
+    public Page<User> findAll(int page) {
         log.info("Gateway FindAll");
-        return repository.findAll();
+        return repository.findAll(new PageRequest(page, 1000));
     }
 
     @Override

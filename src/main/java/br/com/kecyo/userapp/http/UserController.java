@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,6 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Slf4j
 @RestController
@@ -33,11 +33,12 @@ public class UserController {
             @ApiResponse(code = 200, message = "User found")
     })
     @RequestMapping(method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<UserDataContract>> findAll() {
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            value = "/{page}")
+    public ResponseEntity<Page<UserDataContract>> findAll(@PathVariable("page") final Integer page) {
         log.info("Endpoint: findAll");
-        final List<UserDataContract> userAll = userSearch.findAll();
-        return ResponseEntity.ok(userAll);
+        Page<UserDataContract> all = userSearch.findAll(page);
+        return ResponseEntity.ok(all);
     }
 
     @ApiOperation(value = "Request User by Id")
@@ -47,7 +48,7 @@ public class UserController {
     })
     @RequestMapping(method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE,
-            value = "/{id}")
+            value = "/id/{id}")
     public ResponseEntity<UserDataContract> findById(@PathVariable("id") final String id) {
         log.info("Endpoint: findById id={}", id);
 

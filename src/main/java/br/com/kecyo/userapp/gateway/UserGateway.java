@@ -1,13 +1,13 @@
 package br.com.kecyo.userapp.gateway;
 
 import br.com.kecyo.userapp.entities.User;
+import org.springframework.data.domain.Page;
 
-import java.util.List;
 import java.util.Optional;
 
 public interface UserGateway {
 
-    List<User> findAll();
+    Page<User> findAll(int page);
 
     Optional<User> findById(final String id);
 

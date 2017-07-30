@@ -8,6 +8,7 @@ import br.com.kecyo.userapp.usecases.exception.UserNotFoundException;
 import com.google.common.base.Preconditions;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -24,13 +25,11 @@ public class UserSearch {
 
     private final UserDataContractConverter userDataContractConverter;
 
-    public List<UserDataContract> findAll() {
+    public Page<UserDataContract> findAll(int page) {
         log.info("Search FindAll");
         return userGateway
-                        .findAll()
-                        .stream()
-                        .map(this::convert)
-                        .collect(Collectors.toList());
+                        .findAll(page)
+                        .map(this::convert);
     }
 
     private UserDataContract convert(final User user){

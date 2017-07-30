@@ -1,4 +1,4 @@
-package br.com.kecyo.userapp.usecases.exception;
+package br.com.kecyo.userapp.usescases.exception;
 
 
 public class UserNotFoundException extends RuntimeException {

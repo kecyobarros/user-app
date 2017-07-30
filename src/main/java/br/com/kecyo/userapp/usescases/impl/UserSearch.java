@@ -1,18 +1,15 @@
-package br.com.kecyo.userapp.usecases.impl;
+package br.com.kecyo.userapp.usescases.impl;
 
 import br.com.kecyo.userapp.entities.User;
 import br.com.kecyo.userapp.gateway.UserGateway;
 import br.com.kecyo.userapp.http.converter.UserDataContractConverter;
 import br.com.kecyo.userapp.http.data.UserDataContract;
-import br.com.kecyo.userapp.usecases.exception.UserNotFoundException;
+import br.com.kecyo.userapp.usescases.exception.UserNotFoundException;
 import com.google.common.base.Preconditions;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.springframework.util.StringUtils.isEmpty;
 

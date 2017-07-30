@@ -1,4 +1,4 @@
-package br.com.kecyo.userapp.usecases.impl;
+package br.com.kecyo.userapp.usescases.impl;
 
 import br.com.kecyo.userapp.entities.User;
 import br.com.kecyo.userapp.gateway.UserGateway;

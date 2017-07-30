@@ -26,7 +26,7 @@ public class ExtractorCSV {
 
         Map<String, Optional<User>> collect;
 
-        final File inputF = new File(MigrationMongoDB.class.getResource("/load/loadUsers.csv").toURI());
+        final File inputF = new File(ExtractorCSV.class.getResource("/load/loadUsers.csv").toURI());
         final  InputStream inputFS = new FileInputStream(inputF);
         final BufferedReader br = new BufferedReader(new InputStreamReader(inputFS));
 

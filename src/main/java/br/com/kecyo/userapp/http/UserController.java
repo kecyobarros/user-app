@@ -70,7 +70,7 @@ public class UserController {
         String id = userSave.save(userDataContract);
 
         UriComponents uriComponents =
-                uriComponentsBuilder.path(EndPointMapping.USER.concat("/{id}"))
+                uriComponentsBuilder.path(EndPointMapping.USER.concat("/id/{id}"))
                                     .buildAndExpand(id);
 
         return ResponseEntity

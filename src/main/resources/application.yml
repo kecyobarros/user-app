@@ -1,6 +1,6 @@
 server:
   port: ${port:8080}
-  context-path: /user
+  context-path: /api
 
 spring:
   profiles:

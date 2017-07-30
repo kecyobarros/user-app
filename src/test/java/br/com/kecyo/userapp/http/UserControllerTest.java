@@ -90,7 +90,7 @@ public class UserControllerTest extends WebMvcTestBase {
                 .content(getJson()))
                 .andExpect(status().isCreated())
                 .andExpect(content().string("12312312321"))
-                .andExpect(redirectedUrl("http://localhost/api/users/12312312321"));
+                .andExpect(redirectedUrl("http://localhost/user/id/12312312321"));
     }
 
     @Test

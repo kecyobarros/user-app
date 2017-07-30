@@ -1,8 +1,8 @@
 package br.com.kecyo.userapp.http;
 
 import br.com.kecyo.userapp.http.data.UserDataContract;
-import br.com.kecyo.userapp.usecases.impl.UserSave;
-import br.com.kecyo.userapp.usecases.impl.UserSearch;
+import br.com.kecyo.userapp.usescases.impl.UserSave;
+import br.com.kecyo.userapp.usescases.impl.UserSearch;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;

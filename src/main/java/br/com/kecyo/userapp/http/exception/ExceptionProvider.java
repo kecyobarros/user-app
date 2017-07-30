@@ -1,6 +1,6 @@
 package br.com.kecyo.userapp.http.exception;
 
-import br.com.kecyo.userapp.usecases.exception.UserNotFoundException;
+import br.com.kecyo.userapp.usescases.exception.UserNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

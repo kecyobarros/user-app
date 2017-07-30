@@ -1,4 +1,4 @@
-package br.com.kecyo.userapp.gateway;
+package br.com.kecyo.userapp.gateways;
 
 import br.com.kecyo.userapp.entities.User;
 import org.springframework.data.domain.Page;

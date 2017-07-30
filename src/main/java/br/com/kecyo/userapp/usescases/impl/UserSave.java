@@ -1,7 +1,7 @@
 package br.com.kecyo.userapp.usescases.impl;
 
 import br.com.kecyo.userapp.entities.User;
-import br.com.kecyo.userapp.gateway.UserGateway;
+import br.com.kecyo.userapp.gateways.UserGateway;
 import br.com.kecyo.userapp.http.converter.UserConverter;
 import br.com.kecyo.userapp.http.data.UserDataContract;
 import com.google.common.base.Preconditions;

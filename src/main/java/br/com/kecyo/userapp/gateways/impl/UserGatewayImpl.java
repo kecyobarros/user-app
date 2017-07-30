@@ -1,8 +1,8 @@
-package br.com.kecyo.userapp.gateway.impl;
+package br.com.kecyo.userapp.gateways.impl;
 
 import br.com.kecyo.userapp.entities.User;
-import br.com.kecyo.userapp.gateway.UserGateway;
-import br.com.kecyo.userapp.gateway.repository.mongo.UserRespository;
+import br.com.kecyo.userapp.gateways.UserGateway;
+import br.com.kecyo.userapp.gateways.repository.mongo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserGatewayImpl implements UserGateway{
 
-    private final UserRespository repository;
+    private final UserRepository repository;
 
     @Override
     public Page<User> findAll(int page) {

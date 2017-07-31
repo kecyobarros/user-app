@@ -21,7 +21,7 @@ public class UserGatewayImpl implements UserGateway{
     @Override
     public Page<User> findAll(int page) {
         log.info("Gateway FindAll");
-        return repository.findAll(new PageRequest(page, 1000));
+        return repository.findAll(new PageRequest(page, 10));
     }
 
     @Override

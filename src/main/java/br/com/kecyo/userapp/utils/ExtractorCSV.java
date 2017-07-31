@@ -26,8 +26,7 @@ public class ExtractorCSV {
 
         Map<String, Optional<User>> collect;
 
-        final File inputF = new File(ExtractorCSV.class.getResource("/load/loadUsers.csv").toURI());
-        final  InputStream inputFS = new FileInputStream(inputF);
+        final InputStream inputFS = this.getClass().getResourceAsStream("/load/loadUsers.csv");
         final BufferedReader br = new BufferedReader(new InputStreamReader(inputFS));
 
         collect = br.lines()
